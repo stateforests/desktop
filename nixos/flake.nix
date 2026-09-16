@@ -26,7 +26,7 @@
       specialArgs = { inherit inputs; };
 
       modules = [
-        ./host.nix
+        ./main.nix
         helium.nixosModules.default
       ];
     };
