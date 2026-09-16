@@ -59,7 +59,7 @@
     wezterm
     fuzzel
     mako
-    i3status-rust
+    waybar
     adwaita-icon-theme
 
     # applications
