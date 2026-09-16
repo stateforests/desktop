@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-repo="$HOME/repo"
+repo="$HOME/files/repositories/desktop"
 
 sudo rsync -a --delete \
   "$repo/nixos/" \
