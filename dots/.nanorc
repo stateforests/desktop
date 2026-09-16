@@ -1,0 +1,24 @@
+set zero
+set linenumbers
+set mouse
+set smarthome
+set softwrap
+set tabsize 2
+set indicator
+set constantshow
+set atblanks
+
+set titlecolor bold,white
+set numbercolor grey
+set keycolor white
+set functioncolor bold,white
+set statuscolor bold,white
+set errorcolor bold,red
+set selectedcolor black,white
+set stripecolor black
+set spotlightcolor black,yellow
+set scrollercolor black
+
+set minibar
+unset constantshow
+unset stateflags
