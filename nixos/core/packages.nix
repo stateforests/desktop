@@ -15,7 +15,7 @@
     mako
     waybar
     adwaita-icon-theme
-    swaylock
+    waylock
     swaybg
     swayimg
 
@@ -44,5 +44,8 @@
 
     # fonts
     nerd-fonts.meslo-lg
+
+    # display manager
+    tuigreet
   ];
 }

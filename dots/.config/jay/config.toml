@@ -69,7 +69,7 @@ minutes = 10
 
 [on-idle]
 type = "exec"
-exec = "swaylock"
+exec = "waylock"
 
 [status]
 format = "i3bar"
