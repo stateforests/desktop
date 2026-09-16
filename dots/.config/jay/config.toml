@@ -71,21 +71,9 @@ minutes = 10
 type = "exec"
 exec = "waylock"
 
-[status]
-format = "i3bar"
-exec = { shell = "i3status-rs $HOME/.config/i3status-rs/config.toml", tag = "i3status" }
-
-[[clients]]
-match.tag = "i3status"
-capabilities = "foreign-toplevel-manager"
-
 [theme]
-bar-bg-color = "#000000"
-bar-status-text-color = "#e0e0e0"
-bar-separator-width = 0
-bar-height = 18
-bar-position = "top"
-bar-font = "monospace 9"
+show-bar = false
+title-height = 0
 
 [tearing]
 mode = "variant2"
