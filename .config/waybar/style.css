@@ -1,0 +1,152 @@
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+
+    font-family: "JetBrains Mono", "DejaVu Sans Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+
+    transition: none;
+    animation: none;
+}
+
+window#waybar {
+    background: #111111;
+    color: #bdbdbd;
+}
+
+#workspaces {
+    margin: 0;
+}
+
+#workspaces button {
+    min-width: 12px;
+    padding: 0 4px;
+    margin: 0;
+
+    background: transparent;
+    color: #555555;
+
+    font-size: 10px;
+}
+
+#workspaces button.focused {
+    background: #d8d8d8;
+    color: #111111;
+}
+
+#workspaces button:hover {
+    background: #333333;
+    color: #d8d8d8;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button.focused:hover {
+    background: #d8d8d8;
+    color: #111111;
+}
+
+#workspaces button.urgent {
+    background: #ffffff;
+    color: #111111;
+}
+
+#taskbar {
+    margin: 0 0 0 8px;
+}
+
+#taskbar button {
+    padding: 0 8px;
+    margin: 0;
+
+    color: #999999;
+    font-size: 11px;
+    font-weight: 500;
+
+    transition: none;
+}
+
+#taskbar button.active {
+    color: #d8d8d8;
+    background: #1c1c1c;
+}
+
+#taskbar button:hover {
+    background: #333333;
+    color: #d8d8d8;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#taskbar button:hover image {
+    -gtk-icon-effect: none;
+}
+
+#taskbar button.active:hover {
+    background: #1c1c1c;
+    color: #d8d8d8;
+}
+
+#mpris {
+    padding: 0 8px;
+    margin: 0;
+    color: #888888;
+    transition: none;
+}
+
+#pulseaudio-slider {
+    padding: 0 8px;
+    margin: 0;
+    border-left: 1px solid #222222;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 4px;
+    min-width: 60px;
+    background-color: #222222;
+}
+
+#pulseaudio-slider highlight {
+    min-height: 4px;
+    background-color: #d8d8d8;
+}
+
+#clock {
+    padding: 0 5px;
+    margin: 0;
+    color: #d8d8d8;
+}
+
+#clock {
+    padding-right: 8px;
+    color: #888888
+}
+
+#tray {
+    padding: 0 5px;
+    margin: 0;
+    border-left: 1px solid #222222;
+}
+
+#tray > .passive {
+    opacity: 0.55;
+}
+
+#tray > .needs-attention {
+    background: #d8d8d8;
+}
+
+#pulseaudio.muted {
+    color: #555555;
+}

@@ -1,0 +1,87 @@
+on-graphics-initialized = [
+    { type = "exec", exec = "mako" },
+    { type = "exec", exec = "wl-tray-bridge" },
+    { type = "exec", exec = "equibop" },
+]
+
+auto-reload = true
+
+[shortcuts]
+alt-f = "toggle-fullscreen"
+alt-c = "open-control-center"
+alt-shift-f = "toggle-floating"
+
+alt-q = "close"
+alt-shift-q = "quit"
+alt-r = "reload-config-toml"
+
+alt-Return = { type = "exec", exec = "wezterm" }
+alt-d = { type = "exec", exec = "fuzzel" }
+
+alt-shift-s = { type = "exec", exec = { prog = "bash", args = ["-lc", 'wayfreeze & PID=$!; sleep 0.1; grim -g "$(slurp)" - | wl-copy; kill "$PID" 2>/dev/null'], privileged = true } }
+
+XF86AudioRaiseVolume = { type = "exec", exec = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+" }
+XF86AudioLowerVolume = { type = "exec", exec = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" }
+XF86AudioMute = { type = "exec", exec = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" }
+
+XF86MonBrightnessUp = { type = "exec", exec = "brightnessctl set 5%+" }
+XF86MonBrightnessDown = { type = "exec", exec = "brightnessctl set 5%-" }
+
+ctrl-alt-1 = { type = "switch-to-vt", num = 1 }
+ctrl-alt-2 = { type = "switch-to-vt", num = 2 }
+ctrl-alt-3 = { type = "switch-to-vt", num = 3 }
+ctrl-alt-4 = { type = "switch-to-vt", num = 4 }
+ctrl-alt-5 = { type = "switch-to-vt", num = 5 }
+ctrl-alt-6 = { type = "switch-to-vt", num = 6 }
+ctrl-alt-7 = { type = "switch-to-vt", num = 7 }
+ctrl-alt-8 = { type = "switch-to-vt", num = 8 }
+ctrl-alt-9 = { type = "switch-to-vt", num = 9 }
+ctrl-alt-0 = { type = "switch-to-vt", num = 10 }
+
+alt-1 = { type = "show-workspace", name = "1" }
+alt-2 = { type = "show-workspace", name = "2" }
+alt-3 = { type = "show-workspace", name = "3" }
+alt-4 = { type = "show-workspace", name = "4" }
+alt-5 = { type = "show-workspace", name = "5" }
+alt-6 = { type = "show-workspace", name = "6" }
+alt-7 = { type = "show-workspace", name = "7" }
+alt-8 = { type = "show-workspace", name = "8" }
+alt-9 = { type = "show-workspace", name = "9" }
+alt-0 = { type = "show-workspace", name = "10" }
+
+alt-shift-1 = { type = "move-to-workspace", name = "1" }
+alt-shift-2 = { type = "move-to-workspace", name = "2" }
+alt-shift-3 = { type = "move-to-workspace", name = "3" }
+alt-shift-4 = { type = "move-to-workspace", name = "4" }
+alt-shift-5 = { type = "move-to-workspace", name = "5" }
+alt-shift-6 = { type = "move-to-workspace", name = "6" }
+alt-shift-7 = { type = "move-to-workspace", name = "7" }
+alt-shift-8 = { type = "move-to-workspace", name = "8" }
+alt-shift-9 = { type = "move-to-workspace", name = "9" }
+alt-shift-0 = { type = "move-to-workspace", name = "10" }
+
+[idle]
+minutes = 10
+
+[on-idle]
+type = "exec"
+exec = "swaylock"
+
+[status]
+format = "i3bar"
+exec = { shell = "i3status-rs $HOME/.config/i3status-rs/config.toml", tag = "i3status" }
+
+[[clients]]
+match.tag = "i3status"
+capabilities = "foreign-toplevel-manager"
+
+[theme]
+bar-bg-color = "#000000"
+bar-status-text-color = "#e0e0e0"
+bar-separator-width = 0
+bar-height = 18
+bar-position = "top"
+bar-font = "monospace 9"
+
+[tearing]
+mode = "variant2"
