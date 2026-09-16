@@ -83,6 +83,9 @@
     slurp
     swayimg
 
+    # networking
+    rtw88
+
     # fonts
     nerd-fonts.meslo-lg
 
