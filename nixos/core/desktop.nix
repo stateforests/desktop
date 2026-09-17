@@ -1,7 +1,7 @@
 { inputs, pkgs, ... }:
 
 let
-  jay = inputs.jay.packages.${pkgs.system}.default;
+  jay = inputs.jay.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 {
   services.greetd = {
