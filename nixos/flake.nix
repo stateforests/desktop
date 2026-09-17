@@ -3,12 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
-    jay = {
-      url = "github:mahkoh/jay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    
     jay-screenshot = {
       url = "github:Ktrompfl/jay-screenshot";
       inputs.nixpkgs.follows = "nixpkgs";

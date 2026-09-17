@@ -1,14 +1,11 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
-let
-  jay = inputs.jay.packages.${pkgs.stdenv.hostPlatform.system}.default;
-in
 {
   services.greetd = {
     enable = true;
 
     settings.default_session = {
-      command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd '${jay}/bin/jay run'";
+      command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd '${pkgs.jay}/bin/jay run'";
       user = "atlas";
     };
   };
