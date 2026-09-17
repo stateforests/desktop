@@ -2,7 +2,8 @@ on-graphics-initialized = [
     { type = "exec", exec = "mako" },
     { type = "exec", exec = "wl-tray-bridge" },
     { type = "exec", exec = "equibop" },
-    { type = "exec", exec = "waybar" },
+    
+    { type = "exec", exec = { prog = "waybar", privileged = true } },
 
     { type = "exec", exec = { prog = "jay", args = ["input", "device", "14", "set-accel-profile", "flat"] } },
     { type = "exec", exec = { prog = "jay", args = ["input", "device", "14", "set-accel-speed", "--", "-0.6"] } },
