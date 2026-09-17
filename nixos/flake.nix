@@ -3,12 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    
-    jay-screenshot = {
-      url = "github:Ktrompfl/jay-screenshot";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.jay.follows = "jay";
-    };
 
     helium = {
       url = "github:oxcl/nix-flake-helium-browser";

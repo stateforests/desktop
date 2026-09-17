@@ -3,7 +3,6 @@
 {
   environment.systemPackages =
     [
-      inputs.jay-screenshot.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]
     ++ (with pkgs; [
