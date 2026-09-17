@@ -16,7 +16,7 @@ local tall_sens = 0.42398977
 local keys = {
     thin = "*-Grave",
     tall = "*-Z",
-    wide = "*-M4",
+    wide = "*-M5",
     toggle_ninbot = "*-F2",
     fullscreen = "F11",
 }
