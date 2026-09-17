@@ -31,6 +31,7 @@
 
       adwaita-icon-theme
       nerd-fonts.meslo-lg
+      gsettings-desktop-schemas
 
       equibop
       spotify
