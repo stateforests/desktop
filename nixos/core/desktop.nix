@@ -1,7 +1,20 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
+let
+  jay = inputs.jay.packages.${pkgs.system}.default;
+in
 {
-  # wayland
+  services.greetd = {
+    enable = true;
+
+    settings.default_session = {
+      command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd '${jay}/bin/jay run'";
+      user = "atlas";
+    };
+  };
+
+  programs.xwayland.enable = true;
+
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     MOZ_ENABLE_WAYLAND = "1";
@@ -9,7 +22,6 @@
     XCURSOR_SIZE = "24";
   };
 
-  # xdg
   xdg = {
     mime = {
       enable = true;
@@ -36,15 +48,11 @@
 
     portal = {
       enable = true;
-
       extraPortals = with pkgs; [
         xdg-desktop-portal-wlr
         xdg-desktop-portal-gtk
       ];
-      config.common.default = [
-        "wlr"
-        "gtk"
-      ];
+      config.common.default = [ "wlr" "gtk" ];
     };
   };
 }

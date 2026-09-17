@@ -1,51 +1,44 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
-  # programs
-  programs.helium.enable = true;
-  programs.xwayland.enable = true;
-  programs.fish.enable = true;
-  
-  # packages
-  environment.systemPackages = with pkgs; [
-    # desktop
-    jay
-    wezterm
-    fuzzel
-    mako
-    waybar
-    adwaita-icon-theme
-    waylock
-    swaybg
-    swayimg
+  environment.systemPackages =
+    [
+      inputs.jay.packages.${pkgs.system}.default
+      inputs.jay-screenshot.packages.${pkgs.system}.default
+      inputs.helium.packages.${pkgs.system}.default
+    ]
+    ++ (with pkgs; [
+      git
+      gcc
+      cmake
+      unzip
+      fastfetch
+      btop
 
-    # applications
-    equibop
-    spotify
-    zed-editor
-    steam
-    obs-studio
-    kdePackages.kdenlive
-    mpv
-    keepassxc
+      tuigreet
+      wezterm
+      fuzzel
+      mako
+      waybar
+      waylock
+      swaybg
+      wl-clipboard
+      grim
+      slurp
+      swayimg
+      libnotify
+      playerctl
 
-    # utilities
-    git
-    gcc
-    cmake
-    unzip
-    fastfetch
-    btop
-    playerctl
-    libnotify
-    wl-clipboard
-    grim
-    slurp
+      adwaita-icon-theme
+      nerd-fonts.meslo-lg
 
-    # fonts
-    nerd-fonts.meslo-lg
-
-    # display manager
-    tuigreet
-  ];
+      equibop
+      spotify
+      vscode
+      steam
+      obs-studio
+      kdePackages.kdenlive
+      mpv
+      keepassxc
+    ]);
 }

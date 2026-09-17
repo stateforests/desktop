@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "crane": {
+      "locked": {
+        "lastModified": 1788465171,
+        "narHash": "sha256-Y1/TTVXjYXGF068IThQH9fPSZ0SIE74PABlUxnWTUH0=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "eb35abda9f232cc6610b1d1e3200d15c49b7ac54",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ipetkov",
+        "repo": "crane",
+        "type": "github"
+      }
+    },
     "helium": {
       "inputs": {
         "nixpkgs": [
@@ -20,41 +35,48 @@
         "type": "github"
       }
     },
-    "mcsr-nixos": {
+    "jay": {
       "inputs": {
+        "crane": "crane",
         "nixpkgs": [
           "nixpkgs"
-        ]
+        ],
+        "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1789149434,
-        "narHash": "sha256-U42QlbfKk9TkbXu/aJjgjeeB5excabGPQzn+YmDZvtk=",
-        "rev": "bcadcea41eefbbd1a868fe1d78a22bf2913eae65",
-        "type": "tarball",
-        "url": "https://git.uku3lig.net/api/v1/repos/uku/mcsr-nixos/archive/bcadcea41eefbbd1a868fe1d78a22bf2913eae65.tar.gz"
+        "lastModified": 1789653732,
+        "narHash": "sha256-hq+j6mxAjIsNIujLI2jxFwGe7DFEEmnfrwvL/U8Unf4=",
+        "owner": "mahkoh",
+        "repo": "jay",
+        "rev": "fd20c1b89b6c0ddc8260853809b221bc5f89876d",
+        "type": "github"
       },
       "original": {
-        "type": "tarball",
-        "url": "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz"
+        "owner": "mahkoh",
+        "repo": "jay",
+        "type": "github"
       }
     },
-    "ninjabrain-bot-xwayland": {
+    "jay-screenshot": {
       "inputs": {
+        "jay": [
+          "jay"
+        ],
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1788297689,
-        "narHash": "sha256-75wTkwWsiKwY8CteeO+wBe9LQ4FEaprzS3EzJKEiWhw=",
+        "lastModified": 1788775595,
+        "narHash": "sha256-ixxNnBRdff56LmXEjMD/x+oEz81m4lYgT3t54CmVMxw=",
         "owner": "Ktrompfl",
-        "repo": "ninjabrain-bot-xwayland",
-        "rev": "81b578d1d720a9610da17dc5b49c245e6cb20971",
+        "repo": "jay-screenshot",
+        "rev": "d6d04052743e405d98023d6f86c282a2657ad979",
         "type": "github"
       },
       "original": {
         "owner": "Ktrompfl",
-        "repo": "ninjabrain-bot-xwayland",
+        "repo": "jay-screenshot",
         "type": "github"
       }
     },
@@ -77,9 +99,30 @@
     "root": {
       "inputs": {
         "helium": "helium",
-        "mcsr-nixos": "mcsr-nixos",
-        "ninjabrain-bot-xwayland": "ninjabrain-bot-xwayland",
+        "jay": "jay",
+        "jay-screenshot": "jay-screenshot",
         "nixpkgs": "nixpkgs"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "jay",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789630063,
+        "narHash": "sha256-hulcXtNnQVDTPXiC8dQpTX3FPHxklIfX7Cx2kd2GDrM=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "a1d497a9415999853809ba22a7959b1c36dc6554",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     }
   },

@@ -1,49 +1,43 @@
 { config, pkgs, ... }:
 
 {
-  # boot
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
   boot.extraModulePackages = with config.boot.kernelPackages; [
-    rtw88
+    rtw88  # for my external wifi adapter
   ];
 
-  # networking
   networking.hostName = "desktop";
   networking.networkmanager.enable = true;
 
-  # localization
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";
 
-  # user
+  programs.fish.enable = true;
   users.users.atlas = {
     isNormalUser = true;
     description = "Atlas";
     shell = pkgs.fish;
-
-    extraGroups = [
-      "wheel"
-      "networkmanager"
-    ];
+    extraGroups = [ "wheel" "networkmanager" ];
   };
 
-  # hardware
   hardware.graphics.enable = true;
-
-  # audio
   services.pipewire = {
     enable = true;
     pulse.enable = true;
     alsa.enable = true;
   };
 
-  # nix
   nixpkgs.config.allowUnfree = true;
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    auto-optimise-store = true;
+  };
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "-d";
+  };
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  system.stateVersion = "25.11";
 }

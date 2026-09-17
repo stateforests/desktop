@@ -7,10 +7,10 @@ sudo rsync -a --delete \
   "$repo/nixos/" \
   /etc/nixos/
 
-rsync -a --delete \
-  "$repo/dots/.config/" \
+rsync -a \
+  "$repo/dotfiles/.config/" \
   "$HOME/.config/"
 
 rsync -a \
-  "$repo/dots/.nanorc" \
+  "$repo/dotfiles/.nanorc" \
   "$HOME/.nanorc"
