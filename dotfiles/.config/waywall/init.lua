@@ -21,6 +21,21 @@ local keys = {
     fullscreen = "F11",
 }
 
+local function read_file(name)
+    local file = io.open(name, "r")
+    if not file then return end
+    local data = file:read("*a")
+    file:close()
+    return data
+end
+
+local function shader(name)
+    return {
+        vertex = read_file(resources_folder .. "/shaders/general.vert"),
+        fragment = read_file(resources_folder .. "/shaders/frag/" .. name .. ".frag"),
+    }
+end
+
 local config = {
     input = {
         layout = "gb",
@@ -51,21 +66,6 @@ local config = {
         text_bg = shader("text_bg"),
     },
 }
-
-local function read_file(name)
-    local file = io.open(name, "r")
-    if not file then return end
-    local data = file:read("*a")
-    file:close()
-    return data
-end
-
-local function shader(name)
-    return {
-        vertex = read_file(resources_folder .. "/shaders/general.vert"),
-        fragment = read_file(resources_folder .. "/shaders/frag/" .. name .. ".frag"),
-    }
-end
 
 local scene = Scene.SceneManager.new(waywall)
 
