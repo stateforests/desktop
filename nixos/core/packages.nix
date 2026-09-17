@@ -22,7 +22,7 @@
     # applications
     equibop
     spotify
-    vscodium
+    zed
     steam
     obs-studio
     kdePackages.kdenlive

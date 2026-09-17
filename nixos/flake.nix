@@ -8,16 +8,6 @@
       url = "github:oxcl/nix-flake-helium-browser";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    mcsr-nixos = {
-      url = "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    ninjabrain-bot-xwayland = {
-      url = "github:Ktrompfl/ninjabrain-bot-xwayland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { nixpkgs, helium, ... }@inputs: {
