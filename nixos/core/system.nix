@@ -28,6 +28,11 @@
     alsa.enable = true;
   };
 
+  fileSystems."/mnt/drive" = {
+    device = "/dev/disk/by-uuid/9C8CC6BD8CC690E6";
+    fsType = "ntfs";
+  };
+
   environment.etc."libinput/local-overrides.quirks".text = ''
     [Never Debounce]
     MatchUdevType=mouse
