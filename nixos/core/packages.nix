@@ -3,9 +3,9 @@
 {
   environment.systemPackages =
     [
-      inputs.jay.packages.${pkgs.system}.default
-      inputs.jay-screenshot.packages.${pkgs.system}.default
-      inputs.helium.packages.${pkgs.system}.default
+      inputs.jay.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.jay-screenshot.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]
     ++ (with pkgs; [
       git
