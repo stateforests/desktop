@@ -10,9 +10,7 @@ in
     [
       helium.default
       osu.osu-wine
-      inputs.mcsr-nixos.packages.${system}.ninjabrain-bot
     ]
-
     ++ (with pkgs; [
       git
       gcc

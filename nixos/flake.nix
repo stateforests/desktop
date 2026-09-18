@@ -24,7 +24,7 @@
         ./core/system.nix
         ./core/desktop.nix
         ./core/packages.nix
-        ./core/specific.nix
+        ./core/software.nix
       ];
     };
   };
