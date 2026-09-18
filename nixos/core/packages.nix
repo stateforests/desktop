@@ -11,6 +11,7 @@ in
     git
     unzip
     zip
+    wget
     fastfetch
     btop
     zenity
