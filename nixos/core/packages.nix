@@ -31,7 +31,6 @@ in
     adwaita-icon-theme
     nerd-fonts.meslo-lg
 
-    steam
     equibop
     spotify
     vscode
@@ -40,5 +39,8 @@ in
     mpv
     keepassxc
     vinegar
+
+    steam
+    osu-lazer-bin
   ]);
 }
