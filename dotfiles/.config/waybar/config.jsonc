@@ -31,7 +31,8 @@
         "on-click-middle": "close",
         "rewrite": {
             "Alacritty": "alacritty",
-            "org.prismlauncher.PrismLauncher": "prismlauncher"
+            "org.prismlauncher.PrismLauncher": "prismlauncher",
+            "org.wezfurlong.wezterm": "wezterm"
         },
         "tooltip": false
     },
