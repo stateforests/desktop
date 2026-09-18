@@ -22,7 +22,7 @@
         "disable-scroll": true,
         "all-outputs": false,
         "format": "{name}",
-        "tooltip": false,
+        "tooltip": false
     },
 
     "wlr/taskbar": {
@@ -52,7 +52,7 @@
         "on-click": "playerctl play-pause",
         "on-click-right": "playerctl next",
         "on-click-middle": "playerctl previous",
-        "tooltip": false,
+        "tooltip": false
     },
 
     "pulseaudio/slider": {
@@ -71,6 +71,6 @@
         "icon-size": 16,
         "spacing": 6,
         "show-passive-items": true,
-        "tooltip": false,
+        "tooltip": false
     }
 }

@@ -1,10 +1,18 @@
 { inputs, pkgs, ... }:
 
+let
+  system = pkgs.stdenv.hostPlatform.system;
+  osu = inputs.nix-osu-stable.packages.${system};
+  helium = inputs.helium.packages.${system};
+in
 {
   environment.systemPackages =
     [
-      inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
+      helium.default
+      osu.osu-wine
+      inputs.mcsr-nixos.packages.${system}.ninjabrain-bot
     ]
+
     ++ (with pkgs; [
       git
       gcc
@@ -31,13 +39,14 @@
       adwaita-icon-theme
       nerd-fonts.meslo-lg
 
+      steam
       equibop
       spotify
       vscode
-      steam
       obs-studio
       kdePackages.kdenlive
       mpv
       keepassxc
+      vinegar
     ]);
 }

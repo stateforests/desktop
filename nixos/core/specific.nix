@@ -1,8 +1,5 @@
 { config, pkgs, inputs, ... }:
 
-let
-    mcsrPkgs = inputs.mcsr-nixos.packages.x86_64-linux;
-in 
 {
   # mcsr
   imports = [ inputs.mcsr-nixos.nixosModules.waywall ];
@@ -26,6 +23,6 @@ in
           ];
       })
       pkgs.temurin-bin-21
-      mcsrPkgs.ninjabrain-bot
+      inputs.mcsr-nixos.packages.x86_64-linux.ninjabrain-bot
   ];
 }
