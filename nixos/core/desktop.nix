@@ -9,9 +9,10 @@
       user = "atlas";
     };
   };
+  services.flatpak.enable = true;
 
   programs.xwayland.enable = true;
-
+  programs.nix-ld.enable = true;
   programs.dconf = {
     enable = true;
     profiles.user.databases = [{
@@ -22,8 +23,6 @@
       };
     }];
   };
-
-  services.flatpak.enable = true;
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
