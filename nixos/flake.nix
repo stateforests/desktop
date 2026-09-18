@@ -9,9 +9,6 @@
 
     mcsr-nixos.url = "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz";
     mcsr-nixos.inputs.nixpkgs.follows = "nixpkgs";
-
-    nix-osu-stable.url = "github:gaavin/nix-osu-stable";
-    nix-osu-stable.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { nixpkgs, ... }@inputs: {
