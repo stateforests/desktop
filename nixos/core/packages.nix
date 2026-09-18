@@ -13,6 +13,7 @@ in
     zip
     fastfetch
     btop
+    zenity
 
     jay
     tuigreet

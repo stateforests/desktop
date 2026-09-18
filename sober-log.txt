@@ -1,0 +1,20 @@
+F: No installations directory in /etc/flatpak/installations.d. Skipping
+F: Opening system flatpak installation at path /var/lib/flatpak
+F: Opening user flatpak installation at path /home/atlas/.local/share/flatpak
+F: Opening user flatpak installation at path /home/atlas/.local/share/flatpak
+F: Opening system flatpak installation at path /var/lib/flatpak
+F: Skipping parental controls check for app/org.vinegarhq.Sober/x86_64/stable since parental controls are disabled globally
+F: Opening user flatpak installation at path /home/atlas/.local/share/flatpak
+F: Opening system flatpak installation at path /var/lib/flatpak
+F: /lib32 does not exist in runtime
+F: Allocated instance id 1224084300
+F: Add defaults in dir /org/vinegarhq/Sober/
+F: Add locks in dir /org/vinegarhq/Sober/
+F: Allowing dri access
+F: Allowing wayland access
+F: Allowing pulseaudio access
+F: Pulseaudio user configuration file '/home/atlas/.config/pulse/client.conf': Error opening file /home/atlas/.config/pulse/client.conf: No such file or directory
+F: Pulseaudio user configuration file '/etc/pulse/client.conf': Error opening file /etc/pulse/client.conf: No such file or directory
+F: Running '/nix/store/y0ra9qr3rz81d9wl7dfrldv3j25dc98q-bubblewrap-0.12.0/bin/bwrap --args 78 -- /nix/store/axap6pi52dq1bawgv07ma942lmizyn3c-xdg-dbus-proxy-0.1.7/bin/xdg-dbus-proxy --args=79'
+F: Running '/nix/store/y0ra9qr3rz81d9wl7dfrldv3j25dc98q-bubblewrap-0.12.0/bin/bwrap --args 77 -- sober'
+sober: /usr/lib/x86_64-linux-gnu/libcurl.so.4: no version information available (required by sober)
